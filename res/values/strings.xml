@@ -5,5 +5,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">MENU</string>
     <string name="title_activity_second">SecondActivity</string>
+    <string name="button1">Submit</string>
+    <string name="name">Name</string>
+    <string name="jDesc">Job Description</string>
+    <string name="bVal">Boolean Value</string>
+    <string name="bAcc">Bank Account</string>
+    <string name="ranD">Random Stuff</string>
 
 </resources>

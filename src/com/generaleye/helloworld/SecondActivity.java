@@ -9,28 +9,47 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SecondActivity extends ActionBarActivity {
+	TextView tv;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_second);
+		tv = (TextView)findViewById(R.id.textView1);
 		
 		Intent i = getIntent();
+		String string1 = i.getStringExtra("StringValue1");
+		String string2 = i.getStringExtra("StringValue2");
+		String string3 = i.getStringExtra("StringValue3");
+		String string4 = i.getStringExtra("StringValue4");
+		String string5 = i.getStringExtra("StringValue5");
+		tv.setText("Hello, My name is: "+string1+"\n and I am a: "+string2+"\n Boolean Value: "+string3+"\n Amount in Bank: "+string4+"\n Random Stuff: "+string5);
+		
+		
 //		boolean state = i.getBooleanExtra("PositiveBooleanValue", true);
 //		Integer integer = i.getIntExtra("IntegerValue", 30);
-		String string = i.getStringExtra("StringValue");
+//		String string1 = i.getStringExtra("StringValue1");
+//		String string2 = i.getStringExtra("StringValue2");
+//		String string3 = i.getStringExtra("StringValue3");
+//		String string4 = i.getStringExtra("StringValue4");
+//		String string5 = i.getStringExtra("StringValue5");
 		
 //		Toast.makeText(getApplicationContext(), "boolean value "+":"+state, Toast.LENGTH_SHORT).show();
 //		Toast.makeText(getApplicationContext(), "integer value "+":"+integer, Toast.LENGTH_SHORT).show();
 //		Toast.makeText(getApplicationContext(), "string value "+":"+string, Toast.LENGTH_SHORT).show();
-		TextView textView = new TextView(this);
-	    textView.setTextSize(60);
-	    textView.setText(string);
-	    textView.setAllCaps(true);
+//		TextView textView = new TextView(this);
+//	    textView.setTextSize(40);
+//	    textView.setText(string1);
+//	    // Set the text view as the activity layout
+//	    setContentView(textView);
+//	    
+//	    textView.setText(string2);
+//	    setContentView(textView);
+	    
+//	    textView.setAllCaps(true);
 	    
 	    
-	    // Set the text view as the activity layout
-	    setContentView(textView);
+	   
 	}
 
 	@Override

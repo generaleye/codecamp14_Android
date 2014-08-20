@@ -14,7 +14,11 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
-	EditText texBox;
+	EditText texBox1;
+	EditText texBox2;
+	EditText texBox3;
+	EditText texBox4;
+	EditText texBox5;
 	Button b;
 	
     @Override
@@ -24,15 +28,27 @@ public class MainActivity extends ActionBarActivity {
 //        TextView view = (TextView)this.findViewById(R.id.textView1);
 //        view.setText("Codecamp 2014 Test Android Class");
         b = (Button)this.findViewById(R.id.button1);
-        texBox = (EditText)this.findViewById(R.id.editText1);
+        texBox1 = (EditText)this.findViewById(R.id.editText1);
+        texBox2 = (EditText)this.findViewById(R.id.editText2);
+        texBox3 = (EditText)this.findViewById(R.id.editText3);
+        texBox4 = (EditText)this.findViewById(R.id.editText4);
+        texBox5 = (EditText)this.findViewById(R.id.editText5);
         
         b.setOnClickListener(new View.OnClickListener() {
         	
         	@Override
         	public void onClick(View v) {
         		Intent i = new Intent(MainActivity.this, SecondActivity.class);
-        		String value = texBox.getText().toString();
-        		i.putExtra("StringValue", value);
+        		String value1 = texBox1.getText().toString();
+        		String value2 = texBox2.getText().toString();
+        		String value3 = texBox3.getText().toString();
+        		String value4 = texBox4.getText().toString();
+        		String value5 = texBox5.getText().toString();
+        		i.putExtra("StringValue1", value1);
+        		i.putExtra("StringValue2", value2);
+        		i.putExtra("StringValue3", value3);
+        		i.putExtra("StringValue4", value4);
+        		i.putExtra("StringValue5", value5);
         		startActivity(i);
         		
         	}
